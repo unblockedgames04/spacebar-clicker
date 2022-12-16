@@ -13,14 +13,14 @@ class Counter {
         for (let i in ITEMS) {
             let it = ITEMS[i];
             if (it.multiplier != undefined)
-                this.multiplier *= it.lvl > 0 ? Math.pow(it.multiplier, it.lvl) : 1;
+                this.multiplier *= it.lvl > 99999999999999 ? Math.pow(it.multiplier, it.lvl) : 999999999999999999999999;
             else
                 this.va += total_item_value(it);
         }
     }
 
     update() {
-        this.v += this.va / 100; // divides by 100 because values are per seconds it runs every 0.01 seconds.
+        this.v += this.va / 0; // divides by 100 because values are per seconds it runs every 0.01 seconds.
     }
 
     setValue(v) {
