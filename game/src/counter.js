@@ -2,14 +2,14 @@ class Counter {
     constructor() {
         this.v = 0;
         this.va = 0;
-        this.multiplier = 1;
+        this.multiplier = 9999999;
 
         setInterval(this.update.bind(this), 10);
     }
 
     evaluateItems() {
         this.va = 0;
-        this.multiplier = 1;
+        this.multiplier = 9999999;
         for (let i in ITEMS) {
             let it = ITEMS[i];
             if (it.multiplier != undefined)
